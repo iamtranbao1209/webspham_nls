@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sống Thực - Đừng Sống Ảo | Tuyên truyền Văn hóa số</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-pattern {
+            background-color: #111827;
+            background-image: url("https://images.unsplash.com/photo-1555664424-778a69022365?q=80&w=2070&auto=format&fit=crop");
+            background-blend-mode: overlay;
+            background-size: cover;
+            background-position: center;
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-effect shadow-md transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <i class="fas fa-shield-alt text-blue-600 text-2xl mr-2"></i>
+                    <span class="font-bold text-xl tracking-tight text-gray-900">DETOX<span class="text-blue-600">SỐ</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#thuc-trang" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Thực Trạng</a>
+                        <a href="#dau-hieu" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Dấu Hiệu</a>
+                        <a href="#hau-qua" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Hậu Quả</a>
+                        <a href="#giai-phap" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Giải Pháp</a>
+                        <a href="#quiz" class="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 rounded-full text-sm font-medium transition-colors shadow-lg transform hover:scale-105">Kiểm tra ngay</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="#thuc-trang" class="block px-4 py-2 text-sm hover:bg-gray-100">Thực Trạng</a>
+            <a href="#dau-hieu" class="block px-4 py-2 text-sm hover:bg-gray-100">Dấu Hiệu</a>
+            <a href="#hau-qua" class="block px-4 py-2 text-sm hover:bg-gray-100">Hậu Quả</a>
+            <a href="#giai-phap" class="block px-4 py-2 text-sm hover:bg-gray-100">Giải Pháp</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-pattern h-screen flex items-center justify-center text-center px-4 relative">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="relative z-10 max-w-4xl mx-auto animate-fade-in-up">
+            <span class="inline-block py-1 px-3 rounded-full bg-red-600 text-white text-xs font-bold tracking-wider mb-4 uppercase">Cảnh báo từ WHO</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+                Bạn Đang Làm Chủ Công Nghệ Hay <span class="text-blue-400">Công Nghệ Đang Làm Chủ Bạn?</span>
+            </h1>
+            <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                "Nghiện" mạng xã hội đang tác động tiêu cực tới sức khỏe và tinh thần của thanh thiếu niên. Đừng để tuổi trẻ chìm trong thế giới ảo.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#thuc-trang" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transition transform hover:-translate-y-1">
+                    Tìm Hiểu Ngay
+                </a>
+                <a href="#quiz" class="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white font-bold py-4 px-8 rounded-full transition transform hover:-translate-y-1">
+                    Trắc Nghiệm Bản Thân
+                </a>
+            </div>
+        </div>
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white text-2xl"></i>
+        </div>
+    </header>
+
+    <!-- Section 1: Thực Trạng (Statistics) -->
+    <section id="thuc-trang" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Những Con Số Biết Nói</h2>
+                <p class="mt-4 text-lg text-gray-600">Dữ liệu tổng hợp từ WHO, UNICEF và Bộ LĐ-TB&XH năm 2022.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Stat 1 -->
+                <div class="bg-blue-50 p-8 rounded-2xl border border-blue-100 hover:shadow-xl transition-shadow text-center group">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-600 rounded-full mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-gamepad text-2xl"></i>
+                    </div>
+                    <h3 class="text-5xl font-extrabold text-gray-900 mb-2">>30%</h3>
+                    <p class="text-gray-600 font-medium">Thanh thiếu niên chơi game trực tuyến hàng ngày.</p>
+                </div>
+                <!-- Stat 2 -->
+                <div class="bg-red-50 p-8 rounded-2xl border border-red-100 hover:shadow-xl transition-shadow text-center group">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-red-100 text-red-600 rounded-full mb-6 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-clock text-2xl"></i>
+                    </div>
+                    <h3 class="text-5xl font-extrabold text-gray-900 mb-2">5 - 7h</h3>
+                    <p class="text-gray-600 font-medium">Thời gian trung bình trẻ em Việt Nam dùng MXH mỗi ngày.</p>
+                </div>
+                <!-- Stat 3 -->
+                <div class="bg-yellow-50 p-8 rounded-2xl border border-yellow-100 hover:shadow-xl transition-shadow text-center group">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-yellow-100 text-yellow-600 rounded-full mb-6 group-hover:bg-yellow-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-user-shield text-2xl"></i>
+                    </div>
+                    <h3 class="text-5xl font-extrabold text-gray-900 mb-2">Chỉ 36%</h3>
+                    <p class="text-gray-600 font-medium">Trẻ em được giáo dục về an toàn trên không gian mạng.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Dấu Hiệu & Cơ Chế (Signs & Dopamine) -->
+    <section id="dau-hieu" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 text-blue-400">Bạn Có Đang "Nghiện" Không?</h2>
+                    <p class="mb-8 text-gray-300 text-lg">Theo các chuyên gia tâm lý, nếu bạn có những biểu hiện sau, hãy cẩn thận:</p>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-red-500 mt-1 mr-4"></i>
+                            <div>
+                                <strong class="block text-xl">Thờ ơ với cuộc sống thực</strong>
+                                <span class="text-gray-400">Không quan tâm đến các hoạt động thể chất, gia đình, chỉ dán mắt vào màn hình.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-red-500 mt-1 mr-4"></i>
+                            <div>
+                                <strong class="block text-xl">Hội chứng FOMO & Lo âu</strong>
+                                <span class="text-gray-400">Cảm thấy bồn chồn, bứt rứt, lo sợ bị bỏ lỡ khi không được cầm điện thoại.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-red-500 mt-1 mr-4"></i>
+                            <div>
+                                <strong class="block text-xl">Che giấu hành vi</strong>
+                                <span class="text-gray-400">Nói dối bố mẹ về thời gian sử dụng, lén lút dùng điện thoại ban đêm.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- The Trap / Dopamine Explanation -->
+                <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 bg-blue-600 rounded-full blur-3xl opacity-20"></div>
+                    <h3 class="text-2xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-brain text-yellow-400 mr-3"></i> Cái Bẫy Dopamine
+                    </h3>
+                    <p class="text-gray-300 mb-4 text-justify">
+                        Thuật toán của TikTok, Facebook được thiết kế cực kỳ tinh vi. Mỗi lượt <strong>Like, Comment, Thông báo</strong> kích thích não bộ tiết ra <strong>Dopamine</strong> - hormone hạnh phúc tức thời.
+                    </p>
+                    <p class="text-gray-300 mb-6 text-justify">
+                        Điều này tạo ra một vòng lặp nghiện ngập (loop), khiến bạn lướt mãi không dừng (Infinite Scroll) giống như một con bạc đang tìm kiếm phần thưởng tiếp theo.
+                    </p>
+                    <div class="bg-black bg-opacity-50 p-4 rounded-lg border-l-4 border-red-500">
+                        <p class="italic text-sm text-gray-400">"Mạng xã hội hiển thị nội dung dựa trên cơ chế trả thưởng của não bộ, thao túng hành vi người dùng." - Chuyên gia Tâm lý Mai Hương.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Hậu Quả (Consequences) -->
+    <section id="hau-qua" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900">Hệ Lụy Khôn Lường</h2>
+                <p class="mt-4 text-gray-600">Cái giá phải trả không chỉ là thời gian.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Physical Health -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all border-t-4 border-blue-500">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 bg-blue-100 rounded-full mr-4">
+                            <i class="fas fa-heartbeat text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Sức Khỏe Thể Chất</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li><i class="fas fa-dot-circle text-xs mr-2 text-blue-400"></i>Tổn thương não bộ, suy giảm trí nhớ.</li>
+                        <li><i class="fas fa-dot-circle text-xs mr-2 text-blue-400"></i>Cận thị, mỏi mắt kỹ thuật số.</li>
+                        <li><i class="fas fa-dot-circle text-xs mr-2 text-blue-400"></i>Cong vẹo cột sống cổ (Hội chứng Text Neck).</li>
+                        <li><i class="fas fa-dot-circle text-xs mr-2 text-blue-400"></i>Rối loạn giấc ngủ nghiêm trọng.</li>
+                    </ul>
+                </div>
+
+                <!-- Mental Health -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all border-t-4 border-purple-500">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 bg-purple-100 rounded-full mr-4">
+                            <i class="fas fa-head-side-virus text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Sức Khỏe Tinh Thần</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li><i class="fas fa-dot-circle text-xs mr-2 text-purple-400"></i>Trầm cảm, lo âu, cảm giác cô độc.</li>
+                        <li><i class="fas fa-dot-circle text-xs mr-2 text-purple-400"></i>Tự ti, ghen tị khi so sánh bản thân với người khác.</li>
+                        <li><i class="fas fa-dot-circle text-xs mr-2 text-purple-400"></i>Nạn nhân của bắt nạt trực tuyến (Cyberbullying).</li>
+                        <li><i class="fas fa-dot-circle text-xs mr-2 text-purple-400"></i>Có suy nghĩ tiêu cực, tự làm hại bản thân.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Giải Pháp (Solutions) -->
+    <section id="giai-phap" class="py-20 bg-gradient-to-br from-blue-600 to-indigo-700 text-white relative">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-3xl font-bold text-center mb-12">Chúng Ta Cần Làm Gì?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Student Solution -->
+                <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl border border-white border-opacity-20 hover:bg-opacity-20 transition">
+                    <div class="text-4xl mb-4">🎓</div>
+                    <h3 class="text-xl font-bold mb-2">Với Học Sinh</h3>
+                    <p class="text-sm opacity-90 mb-4">Hãy làm chủ thiết bị, đừng để thiết bị làm chủ bạn.</p>
+                    <ul class="text-sm space-y-2">
+                        <li>✅ Đặt giới hạn thời gian dùng App.</li>
+                        <li>✅ Để điện thoại ở phòng khác khi học.</li>
+                        <li>✅ Tham gia CLB thể thao, nghệ thuật.</li>
+                        <li>✅ Tắt thông báo không cần thiết.</li>
+                    </ul>
+                </div>
+
+                <!-- Parent Solution -->
+                <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl border border-white border-opacity-20 hover:bg-opacity-20 transition">
+                    <div class="text-4xl mb-4">👨‍👩‍👧‍👦</div>
+                    <h3 class="text-xl font-bold mb-2">Với Phụ Huynh</h3>
+                    <p class="text-sm opacity-90 mb-4">Đồng hành thay vì chỉ cấm đoán.</p>
+                    <ul class="text-sm space-y-2">
+                        <li>✅ Làm gương cho con khi ở nhà.</li>
+                        <li>✅ Dành thời gian chất lượng (Quality Time) cho con.</li>
+                        <li>✅ Lắng nghe cảm xúc để con không thấy cô đơn.</li>
+                        <li>✅ Hướng dẫn kỹ năng an toàn mạng.</li>
+                    </ul>
+                </div>
+
+                <!-- School Solution -->
+                <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-6 rounded-xl border border-white border-opacity-20 hover:bg-opacity-20 transition">
+                    <div class="text-4xl mb-4">🏫</div>
+                    <h3 class="text-xl font-bold mb-2">Với Nhà Trường</h3>
+                    <p class="text-sm opacity-90 mb-4">Giáo dục kỹ năng số là chìa khóa.</p>
+                    <ul class="text-sm space-y-2">
+                        <li>✅ Tích hợp bài học an toàn số vào chương trình.</li>
+                        <li>✅ Tổ chức sân chơi lành mạnh.</li>
+                        <li>✅ Tư vấn tâm lý học đường.</li>
+                        <li>✅ Quy định rõ ràng về sử dụng thiết bị.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-900">Trắc Nghiệm Nhanh: Bạn Có Nghiện Smartphone?</h2>
+            
+            <div id="quiz-container" class="bg-gray-100 p-8 rounded-2xl shadow-inner">
+                <!-- Question View -->
+                <div id="question-view">
+                    <p class="text-xl font-medium mb-6" id="question-text">Câu hỏi sẽ hiện ở đây...</p>
+                    <div class="grid gap-4" id="options-container">
+                        <!-- Options will be injected via JS -->
+                    </div>
+                </div>
+
+                <!-- Result View (Hidden by default) -->
+                <div id="result-view" class="hidden text-center">
+                    <div class="mb-4">
+                        <i id="result-icon" class="fas fa-check-circle text-6xl text-green-500 mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-2" id="result-title">Kết quả</h3>
+                        <p class="text-lg text-gray-600 mb-6" id="result-message">Lời khuyên</p>
+                    </div>
+                    <button onclick="resetQuiz()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition">Làm lại</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gray-900 text-center px-4">
+        <h2 class="text-3xl font-bold text-white mb-6">Cam Kết "Detox Số" Ngay Hôm Nay</h2>
+        <p class="text-gray-400 mb-8 max-w-2xl mx-auto">Hãy đặt điện thoại xuống và nhìn ngắm thế giới thật. Cuộc sống tươi đẹp đang chờ bạn ở ngoài màn hình.</p>
+        <button onclick="document.getElementById('pledge-modal').classList.remove('hidden')" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-200">
+            Tôi Cam Kết!
+        </button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="mb-2">Nội dung dựa trên phóng sự của <strong>VTV24</strong> và tài liệu nghiên cứu về văn hóa sử dụng điện thoại.</p>
+            <p class="text-sm">© 2025 Dự án Tuyên truyền Văn hóa Số. Vì một thế hệ trẻ khỏe mạnh và thông thái.</p>
+        </div>
+    </footer>
+
+    <!-- Pledge Modal -->
+    <div id="pledge-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center px-4">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full text-center relative animate-fade-in-up">
+            <button onclick="document.getElementById('pledge-modal').classList.add('hidden')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="text-5xl text-green-500 mb-4"><i class="fas fa-hand-holding-heart"></i></div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Tuyệt vời!</h3>
+            <p class="text-gray-600 mb-6">Hành trình vạn dặm bắt đầu từ một bước chân. Hôm nay, hãy thử tắt điện thoại 1 giờ trước khi ngủ nhé!</p>
+            <button onclick="document.getElementById('pledge-modal').classList.add('hidden')" class="bg-blue-600 text-white py-2 px-6 rounded-full font-bold hover:bg-blue-700">Đồng ý</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Quiz Logic
+        const questions = [
+            {
+                text: "Bạn thường cảm thấy lo lắng hoặc bồn chồn khi quên mang điện thoại?",
+                options: ["Không bao giờ", "Thỉnh thoảng", "Thường xuyên", "Luôn luôn"],
+                scores: [0, 1, 2, 3]
+            },
+            {
+                text: "Bạn có hay kiểm tra điện thoại ngay khi vừa thức dậy và trước khi ngủ?",
+                options: ["Không", "Hiếm khi", "Thường xuyên", "Chắc chắn rồi"],
+                scores: [0, 1, 2, 3]
+            },
+            {
+                text: "Bạn đã bao giờ nói dối về thời gian bạn sử dụng mạng xã hội chưa?",
+                options: ["Chưa từng", "Đôi khi", "Nhiều lần", "Rất thường xuyên"],
+                scores: [0, 1, 2, 3]
+            },
+            {
+                text: "Bạn có cảm thấy cuộc sống của người khác trên mạng thú vị hơn mình (Ghen tị/Tự ti)?",
+                options: ["Không quan tâm", "Đôi chút", "Thường xuyên", "Rất áp lực"],
+                scores: [0, 1, 2, 3]
+            }
+        ];
+
+        let currentQuestion = 0;
+        let totalScore = 0;
+
+        function renderQuestion() {
+            const q = questions[currentQuestion];
+            document.getElementById('question-text').textContent = `Câu ${currentQuestion + 1}/${questions.length}: ${q.text}`;
+            const optsContainer = document.getElementById('options-container');
+            optsContainer.innerHTML = '';
+
+            q.options.forEach((opt, index) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left p-4 bg-white border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-300 transition-all font-medium text-gray-700";
+                btn.textContent = opt;
+                btn.onclick = () => handleAnswer(q.scores[index]);
+                optsContainer.appendChild(btn);
+            });
+        }
+
+        function handleAnswer(score) {
+            totalScore += score;
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                renderQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            document.getElementById('question-view').classList.add('hidden');
+            const resultView = document.getElementById('result-view');
+            resultView.classList.remove('hidden');
+            
+            const title = document.getElementById('result-title');
+            const msg = document.getElementById('result-message');
+            const icon = document.getElementById('result-icon');
+
+            if (totalScore <= 3) {
+                title.textContent = "Tuyệt vời! Bạn làm chủ công nghệ.";
+                title.className = "text-2xl font-bold mb-2 text-green-600";
+                msg.textContent = "Bạn có thói quen sử dụng lành mạnh. Hãy duy trì nhé!";
+                icon.className = "fas fa-medal text-6xl text-green-500 mb-4";
+            } else if (totalScore <= 7) {
+                title.textContent = "Cẩn thận! Bạn đang chớm phụ thuộc.";
+                title.className = "text-2xl font-bold mb-2 text-yellow-600";
+                msg.textContent = "Hãy thử đặt giới hạn thời gian sử dụng để cân bằng lại cuộc sống.";
+                icon.className = "fas fa-exclamation-triangle text-6xl text-yellow-500 mb-4";
+            } else {
+                title.textContent = "Cảnh báo! Bạn có dấu hiệu 'nghiện' nặng.";
+                title.className = "text-2xl font-bold mb-2 text-red-600";
+                msg.textContent = "Mạng xã hội đang ảnh hưởng xấu đến bạn. Hãy tìm sự hỗ trợ từ gia đình hoặc chuyên gia, và bắt đầu cai nghiện kỹ thuật số ngay.";
+                icon.className = "fas fa-skull-crossbones text-6xl text-red-500 mb-4";
+            }
+        }
+
+        function resetQuiz() {
+            currentQuestion = 0;
+            totalScore = 0;
+            document.getElementById('question-view').classList.remove('hidden');
+            document.getElementById('result-view').classList.add('hidden');
+            renderQuestion();
+        }
+
+        // Initial render
+        renderQuestion();
+
+        // Smooth reveal on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(section => {
+            section.classList.add('opacity-0'); // Initially hide
+            section.style.transition = 'opacity 0.5s';
+            observer.observe(section);
+        });
+
+        // Add standard opacity transition class via JS for the observer to work smoothly
+        document.head.insertAdjacentHTML("beforeend", `<style>.opacity-0 { opacity: 0; } .animate-fade-in-up { opacity: 1; animation: fadeInUp 0.8s ease-out; }</style>`)
+
+    </script>
+</body>
+</html>
